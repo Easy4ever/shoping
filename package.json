@@ -6,6 +6,8 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.6.1",
+    "gulp-css-flipper": "^1.0.2",
+    "merge-stream": "^1.0.1",
     "run-git-command": "^1.2.3"
   },
   "devDependencies": {},

@@ -1,1 +1,3 @@
-//alert("مرحبا");
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
