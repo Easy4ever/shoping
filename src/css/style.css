@@ -1,228 +1,638 @@
-@font-face{
-    font-family: "JF flat Regular";
-    src: url(../fonts/JF-Flat-regular.eot);
+@font-face{ /* كود تعريف عن خط خارجي */
+    font-family: "JF flat Regular"; /* اسم الخط */
+    src: url(../fonts/JF-Flat-regular.eot); /* تعريف الخط من نوع eot لنتصفحات الأكسبلور القديم */
+    /* تعريف الخط بأكثر من صيغة للتعرف عليها حميع المتصفحات
+    eot  للإكسبور الجديد ولاننسى الرموز بعد اسم الخط والفورمات الخاصة به
+    
+    svg إيضا لاننسى الموز بعد الاسم والفورمات الخاصة به وهنا الرمز عادتا يكون اسم الخط بداخل ستجده بداخل الملف
+    وإن لم يكون موجود ضع اسم الخط الذي عرفناه بالاعلى
+
+    woff لا يكتب بعدها رموز فقط لا ننسى الفورمات الخاصة به
+
+    tff إيضا لايكتب بعدعا رموز فقط لا تنسى الفورمات الخاصة به
+    */
     src: url(../fonts/JF-Flat-regular.eot?#iefix) format('embedded-opentype'), url('../fonts/JF-Flat-regular.svg#JF Flat Regular') format('svg'), url(../fonts/JF-Flat-regular.woff) format('woff'), url(../fonts/JF-Flat-regular.ttf) format('truetype');
-    font-weight: 400;
-    font-style: normal
+    font-weight: 400; /* تغيير حجم الخط */
+    font-style: normal /* جعل الخط نوعة الافتراضي */
 }
 
+/* يطبق هذا الكود في جميع عناصر التي بداخل عنصر
+body */
 body{
+    /* أختيار نوع الخط الخاص بنا ويجب مراعات بعد اختيار الخط المطلوب وضع فاصلة
+    وأختيار خطوط بديله تكون موجوده في جميع الأجهزة في حالة عدم تمكن المتصفح من تحميل الخط الخاص بنا */
     font-family: "JF Flat Regular",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    color: #555555;
-    line-height: 1.42857143;
+    font-size: 14px; /* تغيير مقاس الخط إلى 14 بيكسل */
+    color: #555555; /* تغيير لون الخط */
+    line-height: 1.42857143; /* ضبط المسافة المستخدم للأسطر بمعدل 1.42857143 */
 }
 
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-navbar 
+وأبنائها*/
 .custom-navbar{
-    border-bottom: 3px solid #eef0ea;
-    width: 100%;
-    background-color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    border-bottom: 3px solid #eef0ea; /* عمل إطار في الاسفل بخصائص التالية */
+    width: 100%; /* جعل العرض 100 بالمئة */
+    background-color: #fff; /* لون الخلفية أبيض */
+    padding-top: 15px; /* عمل حشوة داخليه من الاعلى بمقدار 15 بيسكل */
+    padding-bottom: 15px; /* عمل حشوة داخلية من الاسفل بمقدار 15 بيكسل */
 
 }
 
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+container
+وأبنائها
+ويكون إيضا عنصر الأب بداخل عنصر آخر يحمل كلاس
+custom-navbar */
 .custom-navbar .container{
-padding: 0;
+padding: 0; /* حذف الحشوة من جميع الاتجاهات */
 }
 
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+navbar-brand
+وأبنائها
+ويكون إيضا عنصر الأب بداخل عنصر يحمل كلاس
+container
+وهو بداخل عنصر يحمل كلاس
+custom-navbar */
 .custom-navbar .container .navbar-brand{
-    margin-left: 30px;
-    margin-top: 4px;
+    margin-left: 30px; /* عمل هامش من اليسار مقدار 30 بيكسل */
+    margin-top: 4px; /* عمل خامش من الاعلى بمقدار 40 بيكسل */
 }
 
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-form-control 
+وأبنائها
+------
+إيضا في جميع العناصر التي تحمل كلاس
+custom-btn 
+وأبنائها*/
 .custom-form-control, .custom-btn{
-    color: #868686;
-    border: 1px solid #ebebeb;
-    box-shadow: none;
-    border-radius: 2px;
-    font-size: 14px;
-    padding: 5.5px 13px;
-    transition: all .3s ease;
+    color: #868686; /* تغيير لون النص */
+    border: 1px solid #ebebeb; /* عمل إيطار */
+    box-shadow: none; /* إزالة الظلال */
+    border-radius: 2px; /* إنحدار زواية الإيطار بمعدل 2 بيكسل */
+    font-size: 14px; /* تغيير مقاس الخط */
+    padding: 5.5px 13px; /* عمل حشوة داخلية من الاعلى والاسفل معدل 5.5 بيكسل ومن الإيسر والإيمن بمعدل 13 بيكسل */
+    transition: all .3s ease; /* حركة تغيير الخصائص بشكل تدريجي لمدة .3 من الثواني */
 }
+
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-btn
+أثناء حدث حركة الماوس فوق العنصر */
 .custom-btn:hover{
-    background-color: #d4d4d4;
-    border: 1px solid #8c8c8c;
+    background-color: #d4d4d4; /* تغيير لون الخلفية  */
+    border: 1px solid #8c8c8c; /* عمل إطار بالخصائص التالية */
 
 }
 
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-form-control
+اثناء حدث تركيز على العنصر
+وبشرط يجب ان يكون هذا العنصر بداخل عنصر آخر تحمل كلاس
+custom-navbar */
 .custom-navbar .custom-form-control:focus{
-    border-color: #c2101e;
-    box-shadow: 0 0 2px 0 #c2101e;
+    border-color: #c2101e; /* تغيير لون الإيطار */
+    box-shadow: 0 0 2px 0 #c2101e; /* عمل ظل بالخصائص التالية */
 }
 
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+nav-link
+وأبنائها
+ويكون إيضا عنصر الأب بداخل عنصر يحمل كلاس
+categoties */
 .categories .nav-link{
-    padding: 8px 13px 8px;
-    border-right: 0;
-    border-radius: 0;
+    padding: 8px 13px 8px; /* عمل حشوة داخلية من الأعلى بمعدل 8 بيسكل واليمين واليسار 13 بيكسل والأسفل 8 بيكسل */
+    border-right: 0; /* إزالة الخط الإيطار الإيمن */
+    border-radius: 0; /* إزالة إنحدار الزاولة في الإيطار وجعلة زاولة قائمة */
 }
 
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-dropdown-menu 
+وأبنائها*/
 .custom-dropdown-menu{
-    box-shadow: 0 2px 5px 0 #ebebeb;
-    border-radius: 2px;
-    color: #777;
+    box-shadow: 0 2px 5px 0 #ebebeb; /* عمل ظلال بالخصائص التالية */
+    border-radius: 2px; /* إنحدار زاوية الإيطار بمعدل 2 بيكسل */
+    color: #777; /* تغيير لون الخط */
 }
+
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+checkbox
+وأبنائها
+ويكون إيضا عنصر الأب بداخل عنصر يحتوي على كلاس
+custom-dropdown-menu */
 .custom-dropdown-menu .checkbox{
-    margin: 0 5px;
-    display: inline-block;
+    margin: 0 5px; /* إزالة الهوامش التي بالأعلى والاسفل وعمل هامش من اليمين واليسار بمعدل 5 بيكسل */
+    display: inline-block; /* جعل العنصر يأخذ حجم حقيقي ويضع إعتبار لوجود حشوات او هوامش */
 }
-.custom-dropdown-menu .checkbox label input{
-    margin-left: 5px;
+
+/* يتم تطبيق هذا الكود في جميع عناصر
+input
+وأبنائها
+ويكون إيضا عنصر الأب بداخل عنصر
+label
+التي بداخل عنصر يحمل كلاس اسمه
+checkbox
+الذي بداخل عنصر يحمل كلاس
+custom-dropdown-menu */
+.custom-dropdown-menu .checkbox label input{ 
+    margin-left: 5px; /* عمل هامش على اليسار بمعدل 5 بيكسل */
 }
+
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-btn-primary
+وأبنائها
+ويكون إيضا عنصر الأب داخل عنصر يحمل كلاس
+custom-navbar */
 .custom-navbar .custom-btn-primary{
-    background-color: #ff3956;
-    border-color: #ff3956;
-    color: #fff;
-    padding: 6px 20p 6px 20px;
-    border-radius: 0;
-    font-size: 14px;
-    font-weight: 700;
+    background-color: #ff3956; /* تغيير لون الخلفية */
+    border-color: #ff3956; /* تغير لون الإيطار */
+    color: #fff; /* تغيير لون النص */
+    padding: 6px 20p 6px 20px; /* إضافة حشوة داخلية بالأعلى 6 بيكسل واليمين 2  بيسكل والاسفل 6 بيكسل والإيسر 20 بيكسل*/
+    border-radius: 0; /* إزالة إنحدار الإيطار */
+    font-size: 14px; /* تغيير مقاسم الخط إلى 14 بيكسل */
+    font-weight: 700; /* تغير حجم الخط إلى 700  */
 }
+
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-btn-primary
+الذي يكون داخل عنصر يحمل كلاس 
+custom-navbar
+في جميع حالات الأحداث التالية
+1)  عند مرور فوق العنصر
+2)  عند التركيز في حالة فتح الموقع عبر الجوال
+3) عند التركيز
+4)  عن التركيز في حالة فتح الموقع عبر الجوال و التركيز العادي
+5) عند التركيز في حالة فتح الموقع عبر الجوال و مرور الفوق العنصر */
 .custom-navbar .custom-btn-primary:hover,
 .custom-navbar .custom-btn-primary:active,
 .custom-navbar .custom-btn-primary:focus,
 .custom-navbar .custom-btn-primary:active:focus,
 .custom-navbar .custom-btn-primary:active:hover {
-    background-color: #c2101e;
-    border-color: #c2101e;
+    background-color: #c2101e; /* تغيير لون الخلفية */
+    border-color: #c2101e; /* تغيير لون الإيطار */
 }
+
+/* يطبق هذا الكود في جميع عناصر
+li
+فقط دون إن يرث الأبناء
+ويكون إيضا بداخل عنصر يحمل كلاس
+navbar-nav
+ويكون هذا العنصر بداخل عنصر آخر بحمل كلاس
+custom-navbar */
 .custom-navbar .navbar-nav>li{
-    margin: 0;
+    margin: 0; /* إزالة الهوامش من جميع الاتجاهات */
 }
+
+/* يطبق هذا الكود في جميع العناصر ال
+a
+الذي يحتوي على كلاس
+nav-link
+وأبنائها
+ويجب ان يكون هذا العنصر بداخل عنصر
+li
+الذي بدورة يكون داخل عنصر يحتوي على كلاس
+navbar-nav
+ويكون هذا العنصر بداخل عنصر آخر يحتوي على كلاس
+custom-navbar */
 .custom-navbar .navbar-nav li a.nav-link{
-    color: #555555;
-    font-size: 14px;
-    padding: 15px;
+    color: #555555; /* تغيير لون الخط */
+    font-size: 14px; /* تغيير مقاس الخط */
+    padding: 15px; /* عمل حشوة داخلية بجميع الإتجاهات بمعدل 15 بيكسل */
 }
+
+/* يطبق هذا الكود عند التحريك فوق العناصر ال
+a
+الذي يحتوي على كلاس
+nav-link
+ويجب ان يكون هذا العنصر بداخل عنصر
+li
+الذي بدورة يكون داخل عنصر يحتوي على كلاس
+navbar-nav
+ويكون هذا العنصر بداخل عنصر آخر يحتوي على كلاس
+custom-navbar */
 .custom-navbar .navbar-nav li a.nav-link:hover{
-    color: #000;
+    color: #000; /* تغيير لون الخط */
 }
+
+/* يطبق هذا الكود في جميع العناصر ال
+a
+الذي يحتوي على كلاس
+nav-link
+ويجب ان يكون هذا العنصر بداخل عنصر
+li
+ويكون يحمل كلاس 
+active
+الذي بدورة يكون داخل عنصر يحتوي على كلاس
+navbar-nav
+ويكون هذا العنصر بداخل عنصر آخر يحتوي على كلاس
+custom-navbar */
 .custom-navbar .navbar-nav li.active>a.nav-link{
-    color: #ff3956;
-    font-weight: 700;
-    border-bottom: 1px solid #ff3956;
+    color: #ff3956; /* تغيير لون الخط */
+    font-weight: 700; /* تغيير حجم الخط بمعدل 700 */
+    border-bottom: 1px solid #ff3956; /* عمل إيطار في الأسفل فقط بالخصائص التالية */
 }
+
+/* يطبق هذا الكود في جميع العناصر ال
+a
+الذي يحتوي على كلاس
+nav-link
+ويجب ان يكون هذا العنصر بداخل عنصر
+li
+ويتحرك المؤشر عليه ويحمل كلاس 
+active
+الذي بدورة يكون داخل عنصر يحتوي على كلاس
+navbar-nav
+ويكون هذا العنصر بداخل عنصر آخر يحتوي على كلاس
+custom-navbar */
 .custom-navbar .navbar-nav li.active:hover>a.nav-link{
-    background-color: #e7e7e7;
+    background-color: #e7e7e7; /* تغيير لون الخلفية */
 }
+
+/* ينطبق هذا الكود في جميع عناصرال
+a
+وتتحرك المؤشر فوقة
+ويجب ان يكون بداخل عنصر
+li
+الذي بدورة يكون داخل عنصر يحتوي على كلاس
+custom-dropdown-menu */
 .custom-dropdown-menu li a:hover{
-    background-color: #ffe7ea;
+    background-color: #ffe7ea; /* تغيير لون الخلفية */
 }
+
+/* يطبق هذا الكود في جميع عناصر
+a
+الذي يحمل كلاس 
+btn-icon
+يكون داخل عنصر يحتوي على كلاس
+custom-nabar */
 .custom-navbar a.btn-icon{
-    padding: 5px 10px 4px;
-    color: #777;
-    border: 1px solid #ddd;
-    background-color: transparent;
-    border-radius: 2px;
-    margin-left: 10px;
-    margin-right: 15px;
-    font-size: 12px;
+    padding: 5px 10px 4px; /* عمل حشوة داخلية في الأعلى بمعدل 5 بيكسل واليمين واليسار بمعدل 10 بيكسل والأسفل بمعدل 4 بيكسل */
+    color: #777; /* تغيير لون الخط */
+    border: 1px solid #ddd; /* عمل إيطار بالخصائص التالية */
+    background-color: transparent; /* تغيير لون الخلفية إلى شفافة */
+    border-radius: 2px; /* عمل إنحدار بإيطار بمعدل 2 بيكسل */
+    margin-left: 10px; /* عمل هامش من اليسار بمعدل 10 بيكسل */
+    margin-right: 15px; /* عمل هامش من اليمين بمعدل 15 بيكسل */
+    font-size: 12px; /* تغيير مقاس الخط */
 }
+
+/* يطبق هذا الكود في جميع عناصر
+a
+الذي يحتوي على كلاس
+btn-icon
+وحدث مرور المؤشر فوقة
+وهو بداخل عنصر يحتوي على كلاس
+custom-navbar */
 .custom-navbar a.btn-icon:hover{
-    color: #000000;
-    background-color: #bfbfbf;
+    color: #000000; /* تغيير لون الخط */
+    background-color: #bfbfbf; /* تغيير لون الخلفية */
 }
+
+/* يطبق هذا الكود في عنصر
+li
+الذي يحتوي على حدث آخر عنصر
+ويكون داخل عنصر يحتوي على كلاس
+navbar-nav
+الذي بداخل عنصر يحتوي على كلاس
+custom-navbar */
 .custom-navbar .navbar-nav li:last-of-type{
-    margin-top: 7px;
+    margin-top: 7px; /* عمل هامش في الأعلى بمعدل 7 بيكسل */
 }
 
+/* يطبق هذا الكود في العنصر الذي يحتوي على إيدي
+carousel-featured */
 #carousel-featured{
-    background-color: #f7f8f3;
-    height: 400px;
-    padding-top: 25px;
-}
-#carousel-featured .carousel-item img{
-    height: 375px;
+    background-color: #f7f8f3; /* تغيير لون الخط */
+    height: 400px; /* تغيير طول العنصر بمعدل 400 بيكسل */
+    padding-top: 25px; /* عمل حشوة داخلية من الأعلى بمعدل 25 بيكسل */
 }
 
+/* يطبق هذا الكود في جميع عناصر
+img
+الذي بداخل عنصر يحتوي على كلاس
+carousel-item
+الذي يكون بداخل عنصر يحتوي على إيدي
+carousel-featured */
+#carousel-featured .carousel-item img{
+    height: 375px; /* تغيير طول العنصر بمعدل 375 بيكسل */
+}
+
+/*  يطبق هذا الكود في جميع العناصر الذي يحتوي على كلاس
+product-details
+الذي يكون بداخل عنصر يحتوي على إيدي
+carousel-featured */
 #carousel-featured .product-details{
-    border: 1px solid #dddddb;
-    padding: 20px;
+    border: 1px solid #dddddb; /* عمل إيطار بالخصائص التالية */
+    padding: 20px; /* عمل حشوة داخلية بجميع الإتجاهات بمعدل 20 بيكسل */
     position: relative; /*لنتمكن من تحريك العنصر*/
     top: 50px; /*تحريك العنصر*/
-    height: 200px;
-    background-color: #f7f8f3;
+    height: 200px; /* تغيير طول العنصر بعدل 200 بيكسل */
+    background-color: #f7f8f3; /* تغيير لون الخلفية */
 }
+
+/* يطبق هذا الكود في جميع العناصر الذي يحتوي على كلاس
+product-category
+الذي تكون بداخل عنصر يحتوي على كلاس
+product-details
+الذي يكون بداخل عنصر يحتوي على إيدي
+carousel-featured */
 #carousel-featured .product-details .product-category{
-    border: 1px solid #dddddb;
-    padding: 10px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: #f7f8f3;
+    border: 1px solid #dddddb; /* عمل إيطار بالخصائص التالية */
+    padding: 10px; /* عمل حشوة داخلية بجميع الإتجاهات بمعدل 10 بيكسل */
+    position: absolute; /* السماح بتغيير موقع العنصر */
+    top: -10px; /* تغير موقع العنصر بإتداءا من الأعلى بمعدل -10 بيكسل */
+    right: -10px; /* تغير موقع العنصر بإتداءا من اليمين بمعدل -10 بيكسل */
+    background-color: #f7f8f3; /* تغيير لون الخلفية */
 }
+
+/* يطبق هذا الكود في جميع عناصر
+h1
+الذي تكون بداخل عنصر يحتوي على كلاس
+product-details
+الذي يكون بداخل عنصر يحتوي على إيدي
+carousel-featured */
 #carousel-featured .product-details h1{
-    font-weight: 700;
-    font-size: 175%;
-    margin-top: 18px;
+    font-weight: 700; /* تغيير حجم الخط إلى 700 */
+    font-size: 175%; /* تغيير مقاس الخط إلى 175 بالميئة */
+    margin-top: 18px; /* جعل للعنصر هامش في الأعلى بمعدل 18 بيكسل */
 }
 
+/* ينطبق هذا الكود على العناصر التي تحمل كلاس
+custom-btn-primary
+وهو بداخل عنصر يحتوي على كلاس
+product-details
+وهو بداخل عنصر يحتوي على إيدي
+ carousel-featured */
 #carousel-featured .product-details .custom-btn-primary{
-    color: #f8ad47;
-    border-color: #f8ad47;
-    background-color: transparent;
-    padding: 9px 25px;
-    margin-top: 15px;
-    font-size: 18px;
-    border-radius: 2px;
+    color: #f8ad47; /* جعل لون الخط برتقالي */
+    border-color: #f8ad47; /* جعل لون الإطار برتقالي */
+    background-color: transparent; /* جعل لون الخلفية شفاف */
+    padding: 9px 25px; /* جعل للعنصر حشوة داخليه من أعلى والاسفل 9 بيكسل ومن اليمين واليسار 25 بيكسل */
+    margin-top: 15px; /* جعل للعنصر هامش في الأعلى مبعدل 15 بيكسل */
+    font-size: 18px; /* تغيير مقاس الخط */
+    border-radius: 2px; /* عمل إنحدار في الإيطار بمعدل 2 بيكسل */
 }
+
+/* ينطبق هذا الكود على العناصر التي تحمل كلاس
+sale */
 .sale{
-    background-color: #53ccd7;
-    color: white;
-    font-weight: bold;
-    position: absolute;
+    background-color: #53ccd7; /* تغيير لون الخلفية */
+    color: white; /* تغيير لون الخط */
+    font-weight: bold; /* تغيير حجم الخط */
+    position: absolute; /* لنتمكن من تغيير مكان العنصر */
 }
+
+/* ينطبق هذا الكود على جميع العناصر التي تحمل كلاسين
+sale
+large */
 .sale.large{
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    padding: 35px;
-    left: -15px;
-    top: -15px;
-    line-height: 90%;
-    transform: rotate(-25deg);
-    font-size: 130%;
-    display: flex;
-    flex-direction: column;
+    height: 60px; /* تغيير الطول إلى 60 بيكسل */
+    width: 60px; /* تغيير العرض إلى 60 بيكسل */
+    border-radius: 50%; /* إنحدار الإيطار بمعدل 50 بالمئة */
+    justify-content: center; /* توسيط العنصر من اليمين واليسار */
+    align-items: center; /* توسيط العنصر من فوق وتحت */
+    padding: 35px; /* عمل حشوة داخلية بجميع الاتجاهات بمعدل 35 بيكسل */
+    left: -15px; /* جعل العنصر يبدأ من اليسار ويبعد بمعدل -15 بيسكل */
+    top: -15px; /* جعل العنصر يبدأ من أعلى ويبعد بمعدل -15 بيكسل */
+    line-height: 90%; /* ضبط المسافة المستخدم للأسطر بمعدل 90 بالمئة */
+    transform: rotate(-25deg); /* كود لعمل إستدارة بمعدل -25 */
+    font-size: 130%; /* تغيير مقاس الخط بنسبة 130 بالمئة */
+    display: flex; /* يقوم بعمل حاوية للعناصر التي بداخل هذا العنصر */
+    flex-direction: column; /* طريقة عرض الحاوية على شكل أعمدة فوق بعض */
 }
 
-#carousel-featured .product-details .sale.sale.large span{
-    font-size: 14px;
+/* ينطبق هذا الكود في جميع عناصر
+span
+الذي تكون بداخل عنصر يحتوي على كلاسين
+sale
+large
+الذي يكون بداخل عنصر يحتوي على كلاس
+product-details
+الذي يكون بداخل عنصر يحتوي على إيدي
+carousel-featured
+ */
+#carousel-featured .product-details .sale.large span{
+    font-size: 14px; /* تغيير مقاس الخط إلى 14 بيكسل */
 }
 
+/*  ينطبق هذا الكود في العنصر الذي يحتوي على كلاس
+custom-carousel-indicators-primary */
 .custom-carousel-indicators-primary{
-    top: 235px;
-    right: 35%;
+    top: 235px; /* جعل العنصر يبدأ من أعلى ويبعد بمعدل 235 بيكسل */
+    right: 35%; /* جعل العنصر يبدأ من اليمين ويبعد بمعدل 35 بالمئة */
 }
 
+/* ينطبق هذا الكود على جميع عناصر
+img
+وتكون بداخل عنصر يحتوي على كلاس
+custom-carousel-indicators-primary */
 .custom-carousel-indicators-primary img{
-    height: 75px;
-    width: 75px;
-    border: 2px solid #dddddb;
-    background-color: #fff;
-    margin-right: 2px;
+    height: 75px; /* جعل الطول 75 بيكسل */
+    width: 75px; /* جعل العرض 75 بيكسل */
+    border: 2px solid #dddddb; /* عمل إطار */
+    background-color: #fff; /* تغيير لون الخلفية */
+    margin-right: 2px; /* عمل هامش خارجي من اليمين بمعدل 2 بيكسل */
 }
+
+/* ينطبق هذا الكود على جميع عناصر
+img
+الذي تحتوي على كلاس
+active
+وتكون بداخل عنصر يحتوي على كلاس
+custom-carousel-indicators-primary */
 .custom-carousel-indicators-primary img.active{
-    border-color: #f8ad47;
+    border-color: #f8ad47; /* تغيير لون الإيطار */
 }
+
+/* ينطبق هذا الكود فقط على عناصر
+i
+الذي يكون بداخل عنصر يحتوي على كلاسين
+1) custom-carousel-control
+2)carousel-control-prev 
+--------------------------
+أو ينطبق هذا الكود فقط على عناصر
+i
+الذي يكون بداخل عنصر يحتوي على كلاسين
+1) custom-carousel-control
+2)carousel-control-next
+*/
 #carousel-featured .carousel-control-prev,
 #carousel-featured .carousel-control-next{
-    background: 0 0;
-    color: #868686;
-    text-shadow: none;
-    font-size: 20px;
-}
-.custom-carousel-control.carousel-control-prev>i {
-    position: absolute;
-    right: 25%;
-}
-.custom-carousel-control.carousel-control-next>i {
-    position: absolute;
-    left: 25%;
+    background: 0 0; /* لحذف الخلفية */
+    color: #868686; /* تغيير لون الخط */
+    text-shadow: none; /* إلغاء الظلال من النص */
+    font-size: 20px; /* تغيير مقاس الخط إلى 20 بيكسل */
 }
 
+/* ينطبق هذا الكود فقط على عناصر
+i
+الذي يكون بداخل عنصر يحتوي على كلاسين
+1) custom-carousel-control
+2)carousel-control-prev */
+.custom-carousel-control.carousel-control-prev>i {
+    position: absolute; /* لنتمكن من تغيير مكان العنصر */
+    right: 25%; /* تحريك لليمين بنسبة 25 بالمئة */
+}
+
+/* ينطبق هذا الكود فقط على عناصر
+i
+الذي يكون بداخل عنصر يحتوي على كلاسين
+1) custom-carousel-control
+2)carousel-control-next */
+.custom-carousel-control.carousel-control-next>i {
+    position: absolute; /* لنتمكن من تغيير مكان العنصر */
+    left: 25%; /* تحريك لليسار بنسبة 25 بالمئة */
+}
+
+/* ينطبق هذا الكود فقط على العناصر الذي تحمل كلاس
+col-12
+وتكون داخل عنصر يحتوي على كلاس
+carousel-row */
 .carousel-row>.col-12{
-    padding: 0;
+    padding: 0; /* إلغاء الحشوة في جميع الاتجاهات */
+}
+
+
+
+/******************************* قسم مميزات المتجر ***********************************/
+
+/* يطبق هذا الكود في جميع عناصر الذي يحمل كلاس
+store-features
+وأبنائها */
+#store-features{
+    box-shadow: 0 0 15p #eef0ea; /* إضافة الظلال حول */
+    position: relative; /* لنتمكن من تغيير مكان العنصر */
+    top: -30px; /* تغيير مكان العنصر للأعلى */
+    background-image: url(../images/bg_features.png); /* إضافة صورة في الخلفية */
+    background-repeat: no-repeat; /* no-repeat لعدم تكرار الصورة */
+    background-color: #fff; /* نجعل لون الخلفية أبيض ليظهر هذا اللون في اماكن عدم تواجد الصورة */
+    padding-bottom: 35px; /* إضافة حشوة داخلية بالاسفل بمعدل 35 بيكسل */
+    padding-top: 5px; /* إضافة حشوة داخلية بالأعلى بمعدل 5 بيكسل */
+}
+
+/* يطبق فقط في عناصر الوسم
+img
+ويكون إيضا داخل عنصر آخر يحمل كلاس
+features
+وهو بداخل عنصر يحمل إيدي
+store-features */
+#store-features .feature>img{
+    height: 40px; /* تغيير طول العنصر بمعدل 40 بيكسل */
+    margin-bottom: 10px; /* عمل هامش في الاسفل بمعدل 10 بيكسل */
+}
+
+/* يطبق هذا الكود في جميع العناصر التي تكود بجوار عنصرين يحملان كلاس
+feature
+وهم بداخل عنصر آخر يحمل إيدي
+store-features */
+#store-features .feature+.feature{
+    border-right: 1px solid #eef0ea; /* إضافة إيطار بالخصاص التالي */
+}
+
+/******************************* قسم الأكثر مبيعًا ***********************************/
+
+/*يطبق هذا الكود في جميع العناصر التي تحتوي على كلاس 
+custom-thumbnail */
+.custom-thumbnail{
+    border: 2px solid #EEF0EA; /* عمل إيطار بخط متواصل بدرجة لون محدد */
+    padding: 8px; /* عمل حشوة بمعدل 8 بيكسل بجميع الاتجاهات */
+    cursor: pointer; /* تغببر شكل الماوس إلى يد */
+    margin-bottom: 20px;
+}
+
+/* يطبق هذا الكود في حدث المرور الماوس فوق إي عنصر يحمل كلاس
+custom-thumbnail */
+.custom-thumbnail:hover{
+    border-color: #53CCD7; /* تغيير لون الإيطار إلى أزرق */
+}
+
+.custom-thumbnail img{
+    height: 250px;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+}
+
+.custom-thumbnail h4{
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.custom-thumbnail .card-body{
+    padding: 9px;
+}
+
+.custom-thumbnail .price{
+    padding-top: 10px;
+}
+
+.custom-thumbnail .sale{
+    padding: 5px 10px;
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    direction: ltr;
+}
+
+.price{
+    color: #53CCD7;
+}
+
+.rating{
+    color: #C2C2C2;
+}
+
+.rating .active{
+    color: #f3af41;
+}
+
+.overlay{
+    position: absolute;
+    background-color: rgba(83,204,215,.5);
+    height: 250px;
+    width: calc(100% - 16px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.overlay:hover{
+    opacity: 1;
+}
+
+.add-to-cart-btn{
+    background-color: #ffffff;
+    color: #19becd;
+    font-weight: bold;
+}
+
+/* هذا الكود سيضيف عنصر وهمي في عنصر الذي يحتوي على كلاس
+sale
+الذي يكون بداخل عنصر أخر يحتوي على كلاس
+custom-thumbnail */
+.custom-thumbnail .sale::before{
+    content: "-";
+}
+
+.custom-carousel-indicators{
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.custom-carousel-indicators>li,
+.custom-carousel-indicators>li.active{
+    height: 13px;
+    width: 13px;
+    margin: 2px;
+    display: inline-block;
+    background-color: #dbdbdb;
+}
+
+.custom-carousel-indicators>li.active{
+    background-color: #696969;
 }
