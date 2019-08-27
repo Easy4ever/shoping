@@ -1013,6 +1013,147 @@ footer-copyright-social */
     color: #bfbfbf;
 }
 
+/* صورة المنتج */
+#carousel-product-images .carousel-indicators{
+    position: relative;
+    top: -35px;
+    right: auto;
+
+}
+
+#carousel-product-images .carousel-item img{
+    border: 1px solid #ebebeb;
+    width:100%;
+}
+
+/* تفاصيل المنتج */
+.block-100{
+    width:100%;
+    display: block;
+}
+
+.product-category{
+    color: #a9a9a9;
+}
+
+#form-product-selection h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 18px 0 18px;
+}
+
+.price.large{
+    font-size: 30px;
+    margin: 20px;
+}
+ /* تعني رمز أكبر ومن ثم نجمه زائد نجمه إي إضافة هذا التنسيق بين كل حاويتين داخل الكلاس borders-between */
+.borders-between>*+*{
+    border-top: 1px solid #ebebeb;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.product-description{
+    margin: 0px 0 10px;
+}
+
+.product-option{
+    display: inline-block; /* لجعل جميع العناصر في سطر واحد */
+    height: 23px;
+    width: 23px;
+    border: 1px solid #ebebeb;
+    text-align: center;
+    line-height: 23px;
+    color: #c2c2c2;
+    margin: 3px 3px 9px 3px;
+}
+
+.product-option input{
+    display: none; /* لإخفاء أزارير الاختيار وجعل النص فقط الظاهر */
+}
+
+.product-option label{
+    font-weight: 700;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.product-option.active{
+    color: #f8ad47;
+    border-color: #f8ad47;
+}
+
+.color-option.active{
+    border-color: #ffffff;
+    outline: #000000 solid 1px;
+}
+
+.product-quantity select{
+    width: 56px;
+    height: 34px !important;
+    padding: 6px 12px;
+    margin-right: 3px;
+}
+
+.product-quantity .label{
+    padding-top: 10px;
+}
+.product-quantity{
+    padding-bottom: 20px;
+}
+
+.btn-primary.custom-btn-with-icon{
+    min-width: 250px;
+    padding: 13px 16px 14px;
+    font-size: 18px;
+}
+
+/* وصف المنتج */
+.heading-with-border-bottom{
+    border-bottom: 2px solid #ebebeb;
+    padding-bottom: 15px;
+}
+
+.heading-inline{
+    display: inline-block;
+    min-width: 250px;
+}
+
+.more-description p,
+.more-description ul{
+    margin-bottom: 10px;
+}
+
+/* تعليقات المنتج */
+
+.comments .media{
+    margin: 15px;
+}
+
+.comments .media:first-child{
+    margin-top: 0px;
+}
+
+.comments .media img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    border: 1px solid #dfdfdf;
+}
+
+.comments .media .media-heading{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* اقترحنا لك */
+
+.suggestions .custom-thumbnail{
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
 /********************************** End Product Page **********************************/
 
 
@@ -1096,6 +1237,16 @@ footer-copyright-social */
         font-size: 150%;
         margin-top: 10px;
     }
+
+    /* صفحة المنتج */
+
+    .product-option{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        line-height: 50px;
+        font-size: 20px;
+    }
 }
 
 @media(max-width: 991px) and (min-width: 768px){
@@ -1156,6 +1307,13 @@ footer-copyright-social */
 
     #footer #brand-logos .img-container img{
         margin: 5px 15px;
+    }
+    
+    /* product page */
+    #form-product-selection,
+    .comments{
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
