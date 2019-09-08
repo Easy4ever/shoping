@@ -1384,6 +1384,44 @@ h1.custom-heading{
 /********************************** End Search Page **********************************/
 
 
+/************************************ Contact Page ************************************/
+
+#map{
+    padding: 0;
+}
+
+#contact-options h4{
+    font-size: 18px;
+    padding-bottom: 12px;
+}
+
+#contact-options .heading-with-border-bottom{
+    margin-bottom: 30px;
+}
+
+#contact-info{
+    margin-bottom: 25px;
+}
+
+#contact-info i{
+    color: #f3af41;
+    font-size: 18px;
+    margin: 10px;
+    width: 25px;
+    text-align: center;
+}
+
+#contact-options textarea{
+    height: 128px !important;
+}
+
+#contact-options {
+    margin-bottom: 25px;
+}
+
+/********************************** End Contact Page **********************************/
+
+
 /********* ترتيب العناصر لأختلاف حجم الشاشة *********/
 
 @media (max-width:1199px) {
@@ -1499,6 +1537,11 @@ h1.custom-heading{
 
     .custom-pagination{
         display: inline-flex;
+    }
+
+    /* صفحة التواصل */
+    #form-subscription{
+        margin-bottom: 40px;
     }
 }
 
