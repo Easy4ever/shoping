@@ -79,31 +79,7 @@ custom-form-control */
 .custom-form-control{
 height: calc(2rem + 2px); /* تغيير إرتفاع العنصر */
 }
-/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
-custom-form-control 
-وأبنائها
-------
-إيضا في جميع العناصر التي تحمل كلاس
-custom-btn 
-وأبنائها*/
-.custom-form-control, .custom-btn{
-    color: #868686; /* تغيير لون النص */
-    border: 1px solid #ebebeb; /* عمل إيطار */
-    box-shadow: none; /* إزالة الظلال */
-    border-radius: 2px; /* إنحدار زواية الإيطار بمعدل 2 بيكسل */
-    font-size: 14px; /* تغيير مقاس الخط */
-    padding: 5.5px 13px; /* عمل حشوة داخلية من الاعلى والاسفل معدل 5.5 بيكسل ومن الإيسر والإيمن بمعدل 13 بيكسل */
-    transition: all .3s ease; /* حركة تغيير الخصائص بشكل تدريجي لمدة .3 من الثواني */
-}
 
-/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
-custom-btn
-أثناء حدث حركة الماوس فوق العنصر */
-.custom-btn:hover{
-    background-color: #d4d4d4; /* تغيير لون الخلفية  */
-    border: 1px solid #8c8c8c; /* عمل إطار بالخصائص التالية */
-
-}
 
 /* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
 custom-form-control
@@ -393,34 +369,6 @@ product-details
     border-radius: 2px; /* عمل إنحدار في الإيطار بمعدل 2 بيكسل */
 }
 
-/* ينطبق هذا الكود على العناصر التي تحمل كلاس
-sale */
-.sale{
-    background-color: #53ccd7; /* تغيير لون الخلفية */
-    color: white; /* تغيير لون الخط */
-    font-weight: bold; /* تغيير حجم الخط */
-    position: absolute; /* لنتمكن من تغيير مكان العنصر */
-}
-
-/* ينطبق هذا الكود على جميع العناصر التي تحمل كلاسين
-sale
-large */
-.sale.large{
-    height: 60px; /* تغيير الطول إلى 60 بيكسل */
-    width: 60px; /* تغيير العرض إلى 60 بيكسل */
-    border-radius: 50%; /* إنحدار الإيطار بمعدل 50 بالمئة */
-    justify-content: center; /* توسيط العنصر من اليمين واليسار */
-    align-items: center; /* توسيط العنصر من فوق وتحت */
-    padding: 35px; /* عمل حشوة داخلية بجميع الاتجاهات بمعدل 35 بيكسل */
-    left: -15px; /* جعل العنصر يبدأ من اليسار ويبعد بمعدل -15 بيسكل */
-    top: -15px; /* جعل العنصر يبدأ من أعلى ويبعد بمعدل -15 بيكسل */
-    line-height: 90%; /* ضبط المسافة المستخدم للأسطر بمعدل 90 بالمئة */
-    transform: rotate(-25deg); /* كود لعمل إستدارة بمعدل -25 */
-    font-size: 130%; /* تغيير مقاس الخط بنسبة 130 بالمئة */
-    display: flex; /* يقوم بعمل حاوية للعناصر التي بداخل هذا العنصر */
-    flex-direction: column; /* طريقة عرض الحاوية على شكل أعمدة فوق بعض */
-}
-
 /* ينطبق هذا الكود في جميع عناصر
 span
 الذي تكون بداخل عنصر يحتوي على كلاسين
@@ -603,17 +551,7 @@ custom-thumbnail */
     padding-top: 10px; /* عمل حشوة من الأعلى بقيمة 10 بيسكل */
 }
 
-/* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
-sale
-ويكود هذا العنصر داخل عنصر آخر يحتوي على كلاس
-custom-thumbnail */
-.custom-thumbnail .sale{
-    padding: 5px 10px; /* عمل حشوة من أعلى واسفل بقيمة 10 بيسكل ومن اليمين ويسار بقيمة 5 بيكسل */
-    position: absolute; /* إعطاء إمكانية تحريك الحر للعنصر */
-    left: 16px; /* جعل مكان العنصر بقيمة 16 بيكسل من جهة اليسار */
-    top: 14px; /* جعل مكان العنصر بقيمة 14 بيكسل من جهة الأعلى */
-    direction: ltr; /* تغيير إتجاه النص وليس العنصر من اليسار إلى اليمين */
-}
+
 
 /* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
 price */
@@ -656,22 +594,6 @@ overlay */
 overlay */
 .overlay:hover{
     opacity: 1; /* جعل العنصر يظهر */
-}
-
-/* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
-add-to-cart-btn */
-.add-to-cart-btn{
-    background-color: #ffffff; /* تغيير لون الخلفية */
-    color: #19becd; /* تغييراللون */
-    font-weight: bold; /* حعل الخط عريض */
-}
-
-/* هذا الكود سيضيف عنصر وهمي في عنصر الذي يحتوي على كلاس
-sale
-الذي يكون بداخل عنصر أخر يحتوي على كلاس
-custom-thumbnail */
-.custom-thumbnail .sale::before{
-    content: "-"; /* إضافة نص */
 }
 
 /* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
@@ -728,30 +650,6 @@ product-image */
 .custom-panel .product-image{
     width: 100%; /* جعل العرض بنسبة 100% من حجم الحاوية الذي تحتويها */
     margin-bottom: 8px; /* عمل هامش في الاسفل بقيمة 8 بيكسل */
-}
-
-/* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
-custom-btn-primary */
-.custom-btn-primary{
-    color: #f8ad47; /* تغيير اللون */
-    border-color: #f8ad47; /* تغيير لون الحدود */
-    background-color: transparent; /* تغيير لون الخلفية إلى شفاف */
-}
-
-/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
-custom-btn-primary
-في جميع حالات الأحداث التالية
-1)  عند مرور فوق العنصر
-2)  عند التركيز في حالة فتح الموقع عبر الجوال
-3) عند التركيز
-4)  عن التركيز في حالة فتح الموقع عبر الجوال و التركيز العادي
-5) عند التركيز في حالة فتح الموقع عبر الجوال و مرور الفوق العنصر */
-.custom-btn-primary:hover, .custom-btn-primary:focus,
-.custom-btn-primary:active, .custom-btn-primary:active:hover,
-.custom-btn-primary:active:focus{
-    color: #b86d07; /* تغيير اللون */
-    border-color: #b86d07; /* تغيير لون الحدود */
-    background-color: transparent; /* تغيير لون الخلفية إلى شفاف */
 }
 
 /* يطبق هذا الكود في جميع العناصر
@@ -906,29 +804,6 @@ footer-nav */
     margin: 27px 0 16px; /* عمل هامش من الاعلى 27 بيكسل ومن الاسفل 16 بيكسل وإزالة الهوامش من على اليمين واليسار */
     font-size: 12px; /* تغيير حجم الخط مبقاس 12 بيكسل */
     font-weight: bold; /* جعل نوع الخط عريض */
-}
-
-/* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
-custom-btn-primary2 */
-.custom-btn-primary2{
-    color: white; /* تغيير اللون */
-    background-color: #f8ad47; /* تغيير لون الخلفية */
-    border-color: #f8ad47; /* تغيير لون الإيطار */
-}
-
-/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
-custom-btn-primary2
-في جميع حالات الأحداث التالية
-1)  عند مرور فوق العنصر
-2)  عند التركيز في حالة فتح الموقع عبر الجوال
-3) عند التركيز
-4)  عن التركيز في حالة فتح الموقع عبر الجوال و التركيز العادي
-5) عند التركيز في حالة فتح الموقع عبر الجوال و مرور الفوق العنصر */
-.custom-btn-primary2:hover, .custom-btn-primary2:focus,
-.custom-btn-primary2:active, .custom-btn-primary2:active:hover,
-.custom-btn-primary2:active:focus{
-    border-color: #b86d07; /* تغيير لون الإيطار */
-    background-color: #b86d07; /* تغيير لون الخلفية */
 }
 
 /* يطبق هذا الكود على جميع عناصر
@@ -1172,29 +1047,6 @@ h1.custom-heading{
     margin-left: 10px;
 }
 
-.custom-table th,
-.custom-table td{
-    padding: 15px;
-    border-bottom: 1px solid #EBEBEB;
-    border-top: 1px solid #EBEBEB;
-    font-size: 120%;
-}
-
-.custom-table th:first-child,
-.custom-table td:first-child{
-    width: 50%;
-}
-
-.custom-table th{
-    color: #C2C2C2;
-    font-weight: normal;
-}
-
-.custom-table th:not(:first-child),
-.custom-table td:not(:first-child){
-    text-align: center;
-}
-
 .custom-table .custom-media h4{
     font-size: 18px;
     margin: 12px 0;
@@ -1209,34 +1061,10 @@ h1.custom-heading{
     margin: 0 auto;
 }
 
-.custom-btn-danger{
-    color: #ff5a5f;
-    border-color: #ff5a5f;
-    background-color: transparent;
-    border-radius: 3px;
-}
-
-.custom-btn-danger:active, .custom-btn-danger:active:focus,
-.custom-btn-danger:active:hover, .custom-btn-danger:focus,
-.custom-btn-danger:hover{
-    background-color: transparent;
-    color: #c2101e;
-    border-color: #c2101e;
-}
-
 .custom-table .custom-media{
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 15px;
-}
-
-.custom-table th:first-child{
-    padding-right: 20px; 
-}
-
-.custom-table tfoot td{
-    border-bottom: none;
-    font-size: 150%
 }
 
 #form-checkout button[type=submit]{
@@ -1315,26 +1143,6 @@ h1.custom-heading{
 #form-advanced-search input[type=checkbox]+label{
     cursor: pointer;
     font-weight: bold;
-}
-
-.ui-slider{
-    margin: 25px 0 35px;
-    height: 2px;
-    background: #c5c5c5;
-}
-
-.ui-slider .ui-slider-handle{
-    background-color: #f8ad47;
-    border: none;
-    border-radius: 50%;
-    height: 12px;
-    width: 12px;
-    top:-6px;
-}
-
-.ui-slider .ui-slider-range{
-    border: 1px solid #f8ad47;
-    top:-1px
 }
 
 #form-advanced-search button{
@@ -1521,11 +1329,6 @@ h1.custom-heading{
     }
 
     /* صفحة البحث */
-    .ui-slider .ui-slider-handle{
-        height: 20px;
-        width: 20px;
-        top: -10px;
-    }
 
     .custom-list-group{
         border-bottom: 0px solid #EBEBEB;

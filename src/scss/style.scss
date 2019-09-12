@@ -1,0 +1,78 @@
+@import './old-style.css';
+@import './_variables';
+@import './_custom_table';
+@import './_mixins';
+@import './_slider';
+@import './_sale';
+
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-form-control 
+وأبنائها
+------
+إيضا في جميع العناصر التي تحمل كلاس
+custom-btn 
+وأبنائها*/
+.custom-form-control, .custom-btn{
+    color: #868686; /* تغيير لون النص */
+    border: 1px solid #ebebeb; /* عمل إيطار */
+    box-shadow: none; /* إزالة الظلال */
+    border-radius: 2px; /* إنحدار زواية الإيطار بمعدل 2 بيكسل */
+    font-size: 14px; /* تغيير مقاس الخط */
+    padding: 5.5px 13px; /* عمل حشوة داخلية من الاعلى والاسفل معدل 5.5 بيكسل ومن الإيسر والإيمن بمعدل 13 بيكسل */
+    transition: all .3s ease; /* حركة تغيير الخصائص بشكل تدريجي لمدة .3 من الثواني */
+}
+
+/* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+custom-btn
+أثناء حدث حركة الماوس فوق العنصر */
+.custom-btn:hover{
+    background-color: #d4d4d4; /* تغيير لون الخلفية  */
+    border: 1px solid #8c8c8c; /* عمل إطار بالخصائص التالية */
+
+}
+
+
+/* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
+custom-btn-primary */
+.custom-btn-primary{
+    @include button-style($brand-color-primary);
+}
+
+.custom-btn-danger{
+    @include button-style($brand-color-danger);
+
+    border-radius: 3px;
+}
+
+/* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
+custom-btn-primary2 */
+.custom-btn-primary2{
+    color: white; /* تغيير اللون */
+    background-color: $brand-color-primary; /* تغيير لون الخلفية */
+    border-color: $brand-color-primary; /* تغيير لون الإيطار */
+
+    /* يطبق هذا الكود في جميع العناصر التي تحمل كلاس
+    custom-btn-primary2
+    في جميع حالات الأحداث التالية
+    1)  عند مرور فوق العنصر
+    2)  عند التركيز في حالة فتح الموقع عبر الجوال
+    3) عند التركيز
+    4)  عن التركيز في حالة فتح الموقع عبر الجوال و التركيز العادي
+    5) عند التركيز في حالة فتح الموقع عبر الجوال و مرور الفوق العنصر */
+    &:hover, &:focus,
+    &:active, &:active:hover,
+    &:active:focus{
+        border-color: $brand-color-primary-dark; /* تغيير لون الإيطار */
+        background-color: $brand-color-primary-dark; /* تغيير لون الخلفية */
+    }
+}
+
+
+
+/* يطبق هذا الكود على جميع العناصر الذي تحتوي على كلاس
+add-to-cart-btn */
+.add-to-cart-btn{
+    background-color: #ffffff; /* تغيير لون الخلفية */
+    color: $brand-color-secondary; /* تغييراللون */
+    font-weight: bold; /* حعل الخط عريض */
+}
